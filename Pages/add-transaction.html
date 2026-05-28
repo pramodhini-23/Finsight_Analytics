@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Transaction</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>💰 Finance</h2>
+    <ul>
+      <li onclick="goTo('../index.html')">Dashboard</li>
+      <li onclick="goTo('analytics.html')">Analytics</li>
+      <li class="active">Add</li>
+      <li onclick="goTo('transaction.html')">Transactions</li>
+      <li onclick="goTo('reports.html')">Reports</li>
+      <li onclick="goTo('profile.html')">Profile</li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1 class="page-title">➕ Add Transaction</h1>
+
+    <div class="form-box">
+
+      <input type="date" id="date">
+      <input type="number" id="amount" placeholder="Amount ₹">
+
+      <select id="type">
+        <option value="">Select Type</option>
+        <option value="income">Credit (Income)</option>
+        <option value="expense">Debit (Expense)</option>
+      </select>
+
+      <input type="text" id="category" placeholder="Category (Food, Travel...)">
+      <textarea id="description" placeholder="Description"></textarea>
+
+      <button onclick="saveTransaction()" class="save-btn">Save Transaction</button>
+
+      <p id="message"></p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
