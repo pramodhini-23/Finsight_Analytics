@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>💰 Finance</h2>
+    <ul>
+      <li onclick="goTo('index.html')" class="active">Dashboard</li>
+      <li onclick="goTo('pages/analytics.html')">Analytics</li>
+      <li onclick="goTo('pages/add-transaction.html')">Add</li>
+      <li onclick="goTo('pages/transaction.html')">Transactions</li>
+      <li onclick="goTo('pages/reports.html')">Reports</li>
+      <li onclick="goTo('pages/profile.html')">Profile</li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1 class="page-title">Dashboard</h1>
+
+    <!-- SUMMARY CARDS -->
+    <div class="cards">
+      <div class="card income">
+        <p>Income</p>
+        <h2>₹<span id="income">0</span></h2>
+      </div>
+
+      <div class="card expense">
+        <p>Expense</p>
+        <h2>₹<span id="expense">0</span></h2>
+      </div>
+
+      <div class="card savings">
+        <p>Savings</p>
+        <h2>₹<span id="savings">0</span></h2>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3>📊 Overview</h3>
+        <button class="toggle-btn" onclick="toggleChart()">Switch</button>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <!-- INSIGHTS -->
+    <div class="insight">
+      <h3>💡 Smart Insights</h3>
+      <ul id="insightList">
+        <li>Loading insights...</li>
+      </ul>
+    </div>
+
+    <!-- RECENT -->
+    <div class="recent-section">
+      <h3 class="section-title">Recent Transactions 📜</h3>
+      <div id="recentList"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

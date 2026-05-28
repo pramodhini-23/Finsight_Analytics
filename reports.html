@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>💰 Finance</h2>
+    <ul>
+      <li onclick="goTo('../index.html')">Dashboard</li>
+      <li onclick="goTo('analytics.html')">Analytics</li>
+      <li onclick="goTo('add-transaction.html')">Add</li>
+      <li onclick="goTo('transaction.html')">Transactions</li>
+      <li class="active">Reports</li>
+      <li onclick="goTo('profile.html')">Profile</li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1 class="page-title">📊 Reports</h1>
+
+    <!-- SUMMARY -->
+    <div class="report-cards">
+
+      <div class="report-card">
+        <h3>📅 Weekly</h3>
+        <p>Income: ₹<span id="weekIncome">0</span></p>
+        <p>Expense: ₹<span id="weekExpense">0</span></p>
+      </div>
+
+      <div class="report-card">
+        <h3>🗓 Monthly</h3>
+        <p>Income: ₹<span id="monthIncome">0</span></p>
+        <p>Expense: ₹<span id="monthExpense">0</span></p>
+      </div>
+
+    </div>
+
+    <!-- INSIGHTS -->
+    <div class="report-box">
+      <h3>🧠 Insights</h3>
+      <div id="reportInsight"></div>
+    </div>
+
+    <!-- DOWNLOAD -->
+    <button class="download-btn" onclick="downloadReport()">
+      ⬇ Download Report
+    </button>
+
+  </div>
+
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

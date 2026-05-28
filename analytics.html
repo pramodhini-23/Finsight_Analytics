@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="analytics-page">
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>💰 Finance</h2>
+    <ul>
+      <li onclick="goTo('../index.html')">Dashboard</li>
+      <li class="active">Analytics</li>
+      <li onclick="goTo('add-transaction.html')">Add</li>
+      <li onclick="goTo('transaction.html')">Transactions</li>
+      <li onclick="goTo('reports.html')">Reports</li>
+      <li onclick="goTo('profile.html')">Profile</li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>📊 Analytics</h1>
+
+    <div class="analytics-grid">
+
+      <div class="chart-box">
+        <h3>Income vs Expense</h3>
+        <canvas id="compareChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Monthly Trend</h3>
+        <canvas id="monthlyChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Category Comparison</h3>
+        <canvas id="categoryChart"></canvas>
+      </div>
+
+      <!-- BUDGET -->
+      <div class="chart-box small-box">
+  <h3>💸 Set Budget</h3>
+
+  <div class="budget-row">
+    <input type="number" id="budgetInput" placeholder="Enter budget ₹">
+    <button onclick="setBudget()" class="set-btn">Set</button>
+  </div>
+
+  <p id="budgetStatus"></p>
+</div>
+      </div>
+<div class="chart-box small-box">
+<div class="chart-box small-box">
+  <h3>🧠 Insights</h3>
+
+  <ul id="aiInsights">
+    <li>📊 You spend more on weekends</li>
+    <li>🍔 Highest spending category: Food</li>
+    <li>📈 Peak spending occurs at month-end</li>
+  </ul>
+
+</div>
+
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
