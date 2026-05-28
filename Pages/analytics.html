@@ -5,12 +5,9 @@
   <title>Analytics</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-
 <body class="analytics-page">
-
 <div class="container">
 
-  <!-- SIDEBAR -->
   <div class="sidebar">
     <h2>💰 Finance</h2>
     <ul>
@@ -23,9 +20,7 @@
     </ul>
   </div>
 
-  <!-- MAIN -->
   <div class="main">
-
     <h1>📊 Analytics</h1>
 
     <div class="analytics-grid">
@@ -45,36 +40,24 @@
         <canvas id="categoryChart"></canvas>
       </div>
 
-      <!-- BUDGET -->
       <div class="chart-box small-box">
-  <h3>💸 Set Budget</h3>
-
-  <div class="budget-row">
-    <input type="number" id="budgetInput" placeholder="Enter budget ₹">
-    <button onclick="setBudget()" class="set-btn">Set</button>
-  </div>
-
-  <p id="budgetStatus"></p>
-</div>
+        <h3>💸 Set Budget</h3>
+        <div class="budget-row">
+          <input type="number" id="budgetInput" placeholder="Enter budget ₹">
+          <button onclick="setBudget()" class="set-btn">Set</button>
+        </div>
+        <p id="budgetStatus"></p>
+        <h3 style="margin-top:16px">🧠 Insights</h3>
+        <ul id="aiInsights">
+          <li>Loading insights...</li>
+        </ul>
       </div>
-<div class="chart-box small-box">
-<div class="chart-box small-box">
-  <h3>🧠 Insights</h3>
 
-  <ul id="aiInsights">
-    <li>📊 You spend more on weekends</li>
-    <li>🍔 Highest spending category: Food</li>
-    <li>📈 Peak spending occurs at month-end</li>
-  </ul>
-
-</div>
-
+    </div>
   </div>
-</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../script.js"></script>
-
 </body>
 </html>
